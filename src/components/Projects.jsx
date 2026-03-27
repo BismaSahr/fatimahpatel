@@ -51,9 +51,9 @@ const Projects = () => {
                             style={{ backgroundColor: project.bgColor }}
                         >
                             {/* Decorative Background Patterns */}
-                            <div className="pattern-rect" style={{ backgroundColor: project.patternColor }}></div>
-                            <div className="pattern-circle circle-1" style={{ backgroundColor: project.patternColor }}></div>
-                            <div className="pattern-circle circle-2" style={{ backgroundColor: project.patternColor }}></div>
+                            <div className="pattern-rect" style={{ backgroundColor: project.patternColor ,opacity: 0.8}}></div>
+                            <div className="pattern-circle circle-1" style={{ backgroundColor: project.patternColor ,opacity: 0.8}}></div>
+                            <div className="pattern-circle circle-2" style={{ backgroundColor: project.patternColor ,opacity: 0.8}}></div>
                             <div className="pattern-circle circle-3" style={{ backgroundColor: project.patternColor, opacity: 0.5 }}></div>
 
                             <div className="row h-100 align-items-center">

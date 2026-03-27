@@ -33,12 +33,13 @@
 }
 
 /* Figma Patterns */
+/* Figma Patterns */
 .pattern-rect {
     position: absolute;
     width: 287px;
     height: 541px;
     right: -80px;
-    top: 30px;
+    top: 58px; /* Default position for cards 1 & 2 */
 
     transform: rotate(15deg);
     border-bottom-right-radius: 40%;
@@ -47,8 +48,14 @@
     z-index: -1;
 }
 
+/* Specific adjustment for the 3rd project card (Dashboard Designing) */
+.project-card:nth-child(3) .pattern-rect {
+    top: auto;   /* Remove the top positioning */
+    bottom: -33px; /* Adjust this value to bring it down further */
+}
 .pattern-circle {
     position: absolute;
+    
     border-radius: 50%;
     z-index: -1;
     opacity: 0.15;
@@ -63,15 +70,15 @@
 
 .circle-2 {
     width: 337px;
-    height: 337px;
-    left: -80px;
+    height: 307px;
+    left: -100px;
     bottom: -150px;
 }
 
 .circle-3 {
     width: 208px;
-    height: 208px;
-    left: 150px;
+    height: 168px;
+    left: 120px;
     bottom: -100px;
 }
 
@@ -108,6 +115,7 @@
     background: #583FBC;
     color: #FFFFFF;
     border-radius: 15px;
+    margin-bottom: 20%;
     padding: 18px 38px;
     font-family: 'Manrope', sans-serif;
     font-weight: 700;

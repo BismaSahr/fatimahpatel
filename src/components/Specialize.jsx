@@ -159,14 +159,22 @@ const Specialize = () => {
                 <path d="M200.358 135.825C237.619 98.5637 293.13 86.5326 352.825 97.2866C412.517 108.04 476.342 141.573 530.128 195.36C583.915 249.146 617.448 312.972 628.202 372.664C638.956 432.359 626.925 487.869 589.664 525.13C552.403 562.391 496.892 574.422 437.198 563.668C377.506 552.914 313.68 519.38 259.894 465.594C206.108 411.808 172.574 347.983 161.821 288.29C151.067 228.596 163.097 173.086 200.358 135.825Z" stroke="#EBECF0" />
               </svg>
 
-              {/* Icon Badges positioned along the elliptical paths */}
-              <img src={illustration} alt="Illustrator" className="orbit-icon orbit-icon-ai" />
-
-              <img src={photoshop} alt="Photoshop" className="orbit-icon orbit-icon-ps" />
-              <img src={figma} alt="Figma" className="orbit-icon orbit-icon-figma" />
-
-              <div className="orbit-badge framer-badge">
-                <div className="badge-core"><SiFramer /></div>
+              {/* Animated Orbiting Icons Wrapper */}
+              <div className="orbiting-icons-wrapper">
+                <div className="orbit-item orbit-item-ai">
+                  <img src={illustration} alt="Illustrator" className="orbit-icon" />
+                </div>
+                <div className="orbit-item orbit-item-ps">
+                  <img src={photoshop} alt="Photoshop" className="orbit-icon" />
+                </div>
+                <div className="orbit-item orbit-item-figma">
+                  <img src={figma} alt="Figma" className="orbit-icon" />
+                </div>
+                <div className="orbit-item orbit-item-framer">
+                  <div className="orbit-badge framer-badge">
+                    <div className="badge-core"><SiFramer /></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -182,6 +190,7 @@ const Specialize = () => {
                   <div className="shape shape-arc-main"></div>
                   <div className="shape shape-arc-inner"></div>
                   <div className="shape shape-arc-upper"></div>
+                  <div className="shape shape-ellipse-2179"></div>
                 </div>
                 <div className="card-info">
                   <span className="card-index">1</span>
@@ -198,6 +207,7 @@ const Specialize = () => {
                   <div className="shape shape-arc-main"></div>
                   <div className="shape shape-arc-inner"></div>
                   <div className="shape shape-arc-upper"></div>
+                  <div className="shape shape-ellipse-2179"></div>
                 </div>
                 <div className="card-info">
                   <span className="card-index card-index-p">2</span>
@@ -214,6 +224,7 @@ const Specialize = () => {
                   <div className="shape shape-arc-main"></div>
                   <div className="shape shape-arc-inner"></div>
                   <div className="shape shape-arc-upper"></div>
+                  <div className="shape shape-ellipse-2179"></div>
                 </div>
                 <div className="card-info">
                   <span className="card-index">3</span>

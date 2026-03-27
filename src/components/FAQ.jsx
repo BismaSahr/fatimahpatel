@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FAQ.css';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0); // First one open by default as per image
@@ -55,7 +55,7 @@ const FAQ = () => {
                             <div className="faq-question-block">
                                 <h3>{item.question}</h3>
                                 <div className="faq-icon">
-                                    {activeIndex === index ? <FiMinus /> : <FiPlus />}
+                                    <FiChevronDown className={activeIndex === index ? 'open' : ''} />
                                 </div>
                             </div>
                             <div className="faq-answer">

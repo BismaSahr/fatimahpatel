@@ -1,7 +1,6 @@
 import React from 'react';
 import './CTA.css';
 import { FiArrowRight } from 'react-icons/fi';
-import CTAVectors from './CTAVectors'; // Import the new component
 
 const CTA = () => {
     return (
@@ -14,9 +13,6 @@ const CTA = () => {
 
                     {/* The Main Purple CTA Card */}
                     <div className="cta-card">
-                        {/* Separate Component for Vector Lines */}
-                        <CTAVectors />
-
                         <div className="cta-content">
                             <div className="cta-text-side">
                                 <h2 className="cta-title">Try me out, risk free!</h2>

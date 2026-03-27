@@ -30,6 +30,7 @@
   margin-right: 90px;
   list-style: none;
   gap: 35px;
+  margin-top: 10px;
 }
 
 .nav-links li a {
@@ -74,10 +75,15 @@
 
 .nav-dashed-line {
   width: 100%;
-  border-top: 3px dashed black;
-
+  border-top: none;
+  height: 2px;
+  background-image: linear-gradient(to right, #000 20%, transparent 0%);
+  background-position: bottom;
+  background-size: 15px 2px;
+  background-repeat: repeat-x;
   opacity: 0.5;
   margin-top: 20px;
+  z-index: 10;
 }
 
 /* --- Responsive Logic --- */

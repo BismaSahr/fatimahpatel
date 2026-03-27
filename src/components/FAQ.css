@@ -104,10 +104,19 @@
 }
 
 .faq-icon {
-    font-size: 24px;
+    font-size: 26px;
     color: #242A41;
     display: flex;
     align-items: center;
+    line-height: 1;
+}
+
+.faq-icon svg {
+    transition: transform 0.25s ease;
+}
+
+.faq-icon svg.open {
+    transform: rotate(180deg);
 }
 
 /* Answer Animation */
