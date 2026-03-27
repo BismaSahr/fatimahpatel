@@ -3,6 +3,7 @@ import './Footer.css';
 import { FiArrowRight } from 'react-icons/fi';
 import { FiLinkedin, FiSend } from 'react-icons/fi';
 import avatarImg from '../assets/avatar-small.png'; // Use your .png from figma
+import LinkdIn from '../assets/linkdIn.png';
 
 const Footer = () => {
     return (
@@ -19,7 +20,7 @@ const Footer = () => {
                     <div className="btn-linkedin-div footer-buttons">
                         <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="btn-linkedin">
                             <span>My Linkedin</span>
-                            <img src="src\assets\linkdIn.png" alt="" style={{ width: "40px" }} />
+                            <img src={LinkdIn} alt="" style={{ width: "40px" }} />
                         </a>
                     </div>
                 </div>
