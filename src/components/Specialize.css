@@ -1,0 +1,548 @@
+.specialize-section {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  background-color: #FFFFFF;
+  padding: clamp(56px, 7vw, 100px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.specialize-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 120px;
+}
+
+@media (max-width: 1380px) and (min-width: 992px) {
+  .specialize-wrapper {
+    max-width: 100%;
+    padding: 0 24px;
+    gap: clamp(28px, 4.5vw, 90px);
+  }
+
+  .specialize-cards-stack {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .orbit-scene {
+    width: min(640px, 100%);
+    margin: 0 auto;
+    left: -10px;
+  }
+}
+
+/* --- Left Orbit Area (Simplified to match image) --- */
+.orbit-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.orbit-scene {
+  position: relative;
+  width: min(725.49px, 100%);
+  aspect-ratio: 1 / 1;
+  left: -64px;
+}
+
+.orbit-scene>svg {
+  width: 100%;
+  height: 100%;
+}
+
+.orbit-rings-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-15deg);
+  /* Tilted look from ref image */
+}
+
+/* Subtle Badges matching ref image colors and look */
+.orbit-badge {
+  position: absolute;
+  border-radius: 50%;
+  /* Uniform circular badges in ref image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.orbit-badge:hover {
+  transform: scale(1.05);
+}
+
+.badge-core {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.orbit-icon {
+  position: absolute;
+  object-fit: contain;
+}
+
+.orbit-icon-ai {
+  width: 16.4%;
+  aspect-ratio: 1 / 1;
+  top: 17.4%;
+  left: 16.3%;
+}
+
+.orbit-icon-ps {
+  width: 16.4%;
+  aspect-ratio: 1 / 1;
+  top: 64.1%;
+  left: 18.8%;
+}
+
+.orbit-icon-figma {
+  width: 16.4%;
+  aspect-ratio: 1 / 1;
+  top: 20%;
+  left: 65.4%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ai-badge {
+  width: 105px;
+  height: 105px;
+  background: #300000;
+  color: #FF9A00;
+  top: 15%;
+  left: 10%;
+}
+
+.ps-badge {
+  width: 105px;
+  height: 105px;
+  background: #001E36;
+  color: #31A8FF;
+  bottom: 20%;
+  left: 10%;
+}
+
+.figma-badge {
+  display: none;
+}
+
+.figma-badge .badge-core svg {
+  font-size: 60px;
+}
+
+.framer-badge {
+  width: 16.3%;
+  aspect-ratio: 1 / 1;
+  background: #000000;
+  top: 66%;
+  left: 70.6%;
+  right: auto;
+  font-size: clamp(30px, 7.2vw, 54px);
+  border-radius: 100px;
+}
+
+.framer-badge .badge-core svg {
+  font-size: 54px;
+}
+
+/* --- Right Content Area --- */
+.content-area {
+  flex: 1;
+  max-width: 614.83px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.specialize-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 58px;
+  color: #242A41;
+  margin-bottom: 28px;
+}
+
+.specialize-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Updated Card Styles for light/subtle look */
+.spec-card {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 202.39px;
+  background: #EDF0F9;
+  border: 2px solid #585F6F;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.spec-card:hover {
+  z-index: 10;
+  transform: none;
+}
+
+/* Apply exact Figma rotations to the parent spec-card */
+.spec-card-design {
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+.spec-card-problem {
+  transform: rotate(2deg);
+  z-index: 2;
+  margin-top: 0;
+}
+
+.spec-card-delivery {
+  transform: rotate(-2deg);
+  z-index: 1;
+  margin-top: 0;
+}
+
+/* --- Card Info Alignment from Figma --- */
+.card-info {
+  position: relative;
+  z-index: 2;
+}
+
+.card-index {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 16px;
+  color: #585F6F;
+  margin: 0;
+}
+
+.card-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  color: #242A41;
+  margin: 0;
+}
+
+.card-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #585F6F;
+  margin-top: 8px;
+  max-width: 529.68px;
+}
+
+/* Problem Card tweaks based on your Figma data */
+.card-index-p {
+  left: 0;
+  top: 0;
+}
+
+.description-p {
+  max-width: 540px;
+}
+
+/* --- Card Background Shape Logic from Figma --- */
+.card-decorations {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: #D9DFF2;
+  transition: opacity 0.3s;
+}
+
+/* Large quarter-circle arc at the bottom-right corner (matches reference image) */
+.shape-arc-main {
+  width: 150px;
+  height: 250px;
+  right: -60px;
+  bottom: -100px;
+
+  border-top-left-radius: 100%;
+}
+
+/* Slightly smaller overlapping circle for the layered arc look */
+.shape-arc-inner {
+  width: 150px;
+  height: 100px;
+  left: -40px;
+  bottom: -50px;
+  background: rgba(217, 223, 242, 0.55);
+}
+
+.shape-arc-upper {
+  width: 100px;
+  height: 90px;
+  left: -60px;
+  top: -40px;
+  background: rgba(217, 223, 242, 0.55);
+}
+
+.bottom-dashed-divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px dashed black;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.vertical-dashed-divider {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  height: 100%;
+  border-left: 3px dashed black;
+  opacity: 0.5;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .specialize-wrapper {
+    gap: 24px;
+  }
+
+  .orbit-scene {
+    width: min(560px, 100%);
+    left: -6px;
+  }
+
+  .vertical-dashed-divider {
+    display: none;
+  }
+
+  .specialize-title {
+    font-size: 38px;
+    line-height: 50px;
+    margin-bottom: 24px;
+  }
+
+  .specialize-cards-stack {
+    gap: 24px;
+  }
+
+  .spec-card {
+    height: 190px;
+    padding: 0 28px;
+  }
+
+  .card-heading {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .card-description {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+/* Responsiveness to maintain visual integrity */
+@media (max-width: 991px) {
+  .specialize-section {
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .specialize-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .vertical-dashed-divider {
+    display: none;
+  }
+
+  .orbit-area {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .orbit-scene {
+    width: min(540px, 90vw);
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .specialize-title {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .content-area {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .specialize-cards-stack {
+    width: 100%;
+    gap: 24px;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .spec-card {
+    height: 202.39px;
+    padding: 0 32px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .card-description {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .specialize-section {
+    padding: 48px 0;
+  }
+
+  .specialize-wrapper {
+    gap: 28px;
+  }
+
+  .orbit-scene {
+    width: min(430px, 90vw);
+  }
+
+  .specialize-title {
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .content-area {
+    padding: 0 14px;
+  }
+
+  .specialize-cards-stack {
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .spec-card {
+    height: auto;
+    min-height: 176px;
+    padding: 24px 18px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-index {
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .card-heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .card-description {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .orbit-scene {
+    width: min(460px, 92vw);
+  }
+
+  .specialize-title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .specialize-cards-stack {
+    gap: 36px;
+  }
+
+  .spec-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: 168px;
+    padding: 22px 16px;
+  }
+
+  .card-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .card-index {
+    font-size: 20px;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
+
+  .card-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .orbit-scene {
+    width: min(320px, 94vw);
+  }
+
+  .spec-card {
+    width: 100%;
+    min-height: 156px;
+    padding: 18px 14px;
+  }
+
+  .specialize-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}

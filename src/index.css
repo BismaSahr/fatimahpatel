@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap');
+
+/* :root {
+  --primary-cyan: #7DE0EA;
+  --text-dark: #242A41;
+  --text-grey: #585F6F;
+  --bg-light-purple: #EDF0F9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .nav-link, .logo, .btn {
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ */
+/* Global dashed line grid effect */
+/* .grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1320px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+}
+
+.grid-line-vertical {
+  width: 50%;
+  height: 100%;
+  border-right: 1px dashed #000000;
+  opacity: 0.15;
+}
+
+.custom-container {
+  max-width: 1166.8px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+} */

@@ -1,0 +1,76 @@
+.bottom-bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Figma: border-top: 1px dashed #26252B */
+    border-top: 1px dashed #26252B;
+    background-color: #FFFFFF;
+}
+
+.bottom-bar-container {
+    width: 100%;
+    max-width: 1280px;
+    /* Matches your previous section widths */
+    height: 89px;
+    /* Figma height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.made-by {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1D2130;
+    margin: 0;
+}
+
+.bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.question-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1D2130;
+}
+
+.email-link {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #583FBC;
+    /* Figma Purple */
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.email-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .bottom-bar-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .bottom-right {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

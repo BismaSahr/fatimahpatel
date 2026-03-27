@@ -1,0 +1,128 @@
+.navbar-container {
+  width: 100%;
+  background: #FFFFFF;
+  padding-top: 11px;
+}
+
+.nav-wrapper {
+  max-width: 1280px;
+  /* Aligns with your Footer and FAQ width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  font-family: 'Manrope', sans-serif;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 24px;
+  color: #242A41;
+  /* Dark blue from Figma */
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  margin-right: 90px;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #1D2130;
+  /* Primary Text Color */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #7DE0EA;
+  /* Cyan hover effect */
+}
+
+.contact-btn {
+  width: 153.14px;
+  height: 54px;
+  background: #7DE0EA;
+
+  /* Figma Cyan */
+  border-radius: 12.8px;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #242A41;
+  transform: translateY(-2px);
+}
+
+.nav-dashed-line {
+  width: 100%;
+  border-top: 3px dashed black;
+
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+/* --- Responsive Logic --- */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: none;
+    /* Hidden by default */
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-btn {
+    display: none;
+  }
+}

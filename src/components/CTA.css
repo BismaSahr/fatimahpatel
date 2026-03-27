@@ -1,0 +1,175 @@
+/* ... keep your previous CSS for cta-section, cta-card, etc. ... */
+
+.cta-card {
+    position: relative;
+    width: 100%;
+    height: 348px;
+    background: #583FBC;
+    border-radius: 32px;
+    overflow: hidden;
+    /* This is crucial to clip the large SVG curves */
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    z-index: 2;
+}
+
+/* Updated Vector Container Styling */
+.cta-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Allows clicking buttons through the SVG */
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    /* Ensures text stays above the lines */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* ... keep your remaining CSS for buttons and responsiveness ... */
+
+.cta-section {
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.cta-stack-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1169px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
+.btn-contact {
+    background: #7DE0EA;
+    color: #FFFFFF !important;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #242A41;
+    transform: translateY(-2px);
+}
+
+/* Rectangle 345 - The Light Blue Background Card */
+.cta-bg-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #7DE0EA;
+    border-radius: 32px;
+    /* This rotation creates the offset corners */
+    transform: rotate(-1.34deg);
+    z-index: -1;
+    /* Sits behind the purple card */
+}
+
+.cta-card {
+    position: relative;
+    width: 100%;
+    height: 348px;
+    background: #583FBC;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    /* Adjusted for better spacing */
+    z-index: 2;
+}
+
+/* Background Vectors Styling */
+.cta-lines {
+    position: absolute;
+    width: 1179.69px;
+    height: 382px;
+    left: -0.33px;
+    top: -61.49px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.25;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cta-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.cta-description {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    max-width: 590px;
+}
+
+.cta-btn {
+    width: 153.14px;
+    height: 58px;
+    background: #7DE0EA;
+    border-radius: 12.8px;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .cta-card {
+        height: auto;
+        padding: 60px 30px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .cta-bg-rectangle {
+        /* Reduce rotation on mobile to avoid layout breaking */
+        transform: rotate(-0.8deg);
+    }
+}
